@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="jumbotron mt-5">
+    <h1 class="display-4">Welcome, {{ current_user.username }}!</h1>
+    <p class="lead">This is your secure dashboard. You are successfully logged in.</p>
+    <hr class="my-4">
+    <p>From here, you can manage your account settings or navigate to other secure areas.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('auth.change_password') }}" role="button">Change Password</a>
+    {% if current_user.username == 'admin' %}
+    <a class="btn btn-secondary btn-lg ml-2" href="{{ url_for('admin.admin_dashboard') }}" role="button">Go to Admin Dashboard</a>
+    {% endif %}
+</div>
+
+<div class="card mt-4">
+    <div class="card-header">
+        Account Information
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Username:</strong> {{ user.username }}</li>
+        <li class="list-group-item"><strong>Account Status:</strong> {{ "Locked" if user.is_locked else "Active" }}</li>
+        <li class="list-group-item"><strong>Failed Attempts:</strong> {{ user.fail_attempts }}</li>
+        {# Chuyển đổi created_at từ UTC sang múi giờ địa phương (Asia/Ho_Chi_Minh) #}
+        {% set created_at_utc = user.created_at.replace(tzinfo=utc) %}
+        {% set local_dt = created_at_utc.astimezone(timezone('Asia/Ho_Chi_Minh')) %}
+        <li class="list-group-item"><strong>Member Since:</b> {{ local_dt.strftime('%Y-%m-%d %H:%M:%S') }}</li>
+        {# Chuyển đổi updated_at từ UTC sang múi giờ địa phương (Asia/Ho_Chi_Minh) #}
+        {% set updated_at_utc = user.updated_at.replace(tzinfo=utc) %}
+        {% set local_dt = updated_at_utc.astimezone(timezone('Asia/Ho_Chi_Minh')) %}
+        <li class="list-group-item"><b>Last Updated:</b> {{ local_dt.strftime('%Y-%m-%d %H:%M:%S') }}</li>
+    </ul>
+</div>
+{% endblock %}

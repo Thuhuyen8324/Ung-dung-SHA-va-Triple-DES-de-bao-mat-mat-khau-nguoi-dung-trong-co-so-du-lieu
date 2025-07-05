@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<div class="jumbotron mt-5">
+    <h1 class="display-4">Admin Dashboard</h1>
+    <p class="lead">Welcome, Administrator. Here you can manage users and view system logs.</p>
+    <hr class="my-4">
+    <div class="row">
+        <div class="col-md-6">
+            <a class="btn btn-primary btn-lg btn-block mb-3" href="{{ url_for('admin.manage_users') }}" role="button">
+                Manage Users
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="btn btn-info btn-lg btn-block mb-3" href="{{ url_for('admin.view_login_logs') }}" role="button">
+                View Login Logs
+            </a>
+        </div>
+    </div>
+    <a class="btn btn-secondary btn-lg mt-3" href="{{ url_for('main.dashboard') }}" role="button">Back to User Dashboard</a>
+</div>
+{% endblock %}

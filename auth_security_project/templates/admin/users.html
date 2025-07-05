@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}Manage Users{% endblock %}
+
+{% block content %}
+<h2 class="mt-4">Manage Users</h2>
+<table class="table table-striped table-bordered mt-3">
+    <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Locked</th>
+            <th>Failed Attempts</th>
+            <th>Created At</th>
+            <th>Last Updated</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>
+                {% if user.is_locked %}
+                    <span class="badge badge-danger">Yes</span>
+                {% else %}
+                    <span class="badge badge-success">No</span>
+                {% endif %}
+            </td>
+            <td>{{ user.fail_attempts }}</td>
+            <td>
+                {# Chuyển đổi created_at từ UTC sang múi giờ địa phương #}
+                {% set created_at_utc = user.created_at.replace(tzinfo=utc) %}
+                {% set created_at_local = created_at_utc.astimezone(timezone('Asia/Ho_Chi_Minh')) %} {# SỬA MÚI GIỜ NÀY NẾU CẦN #}
+                {{ created_at_local.strftime('%Y-%m-%d %H:%M:%S') }}
+            </td>
+            <td>
+                {# Chuyển đổi updated_at từ UTC sang múi giờ địa phương #}
+                {% set updated_at_utc = user.updated_at.replace(tzinfo=utc) %}
+                {% set updated_at_local = updated_at_utc.astimezone(timezone('Asia/Ho_Chi_Minh')) %} {# SỬA MÚI GIỜ NÀY NẾU CẦN #}
+                {{ updated_at_local.strftime('%Y-%m-%d %H:%M:%S') }}
+            </td>
+            <td>
+                {% if user.username != 'admin' %} {# Không cho phép khóa/mở khóa/reset admin qua UI #}
+                    {% if user.is_locked %}
+                        <a href="{{ url_for('admin.unlock_user', user_id=user.id) }}" class="btn btn-sm btn-success">Unlock</a>
+                    {% else %}
+                        <a href="{{ url_for('admin.lock_user', user_id=user.id) }}" class="btn btn-sm btn-warning">Lock</a>
+                    {% endif %}
+                    <a href="{{ url_for('admin.reset_user_password', user_id=user.id) }}" class="btn btn-sm btn-info ml-1">Reset Password</a>
+                    {# THÊM NÚT XÓA TẠI ĐÂY #}
+                    <a href="{{ url_for('admin.delete_user', user_id=user.id) }}" class="btn btn-sm btn-danger ml-1" 
+                       onclick="return confirm('Are you sure you want to delete user {{ user.username }}? This action cannot be undone.');">Delete</a>
+                {% else %}
+                    <span class="text-muted">N/A (Admin)</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{{ url_for('admin.admin_dashboard') }}" class="btn btn-secondary mt-3">Back to Admin Dashboard</a>
+{% endblock %}
