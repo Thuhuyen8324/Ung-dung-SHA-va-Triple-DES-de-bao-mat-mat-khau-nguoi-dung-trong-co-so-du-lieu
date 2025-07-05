@@ -7,8 +7,7 @@
       <strong>Màn hình nhập thông tin</strong>
     </td>
     <td align="center">
-      <img src="![giaodienND](https://github.com/user-attachments/assets/1cdf01e0-09fe-419f-80bb-6300940ac208)
-" alt="Kết quả tính toán" width="30%"><br>
+      <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienND.jpg" alt="Kết quả tính toán" width="30%"><br>
       <strong>Màn hình kết quả tính toán</strong>
     </td>
   </tr>
