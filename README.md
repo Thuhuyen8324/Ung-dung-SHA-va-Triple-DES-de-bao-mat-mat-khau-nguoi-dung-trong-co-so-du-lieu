@@ -10,7 +10,8 @@
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienND.jpg" alt="Kết quả tính toán" width="100%"><br>
       <strong>Màn hình giao diện người dùng</strong>
     </td>
-     <td align="center">
+  </tr>
+  <td align="center">
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienAdmin.jpg" alt="màn hình điền thông tin" width="100%"><br>
       <strong>Màn hình giao diện Admin</strong>
     </td>
@@ -18,7 +19,6 @@
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienND.jpg" alt="Kết quả tính toán" width="100%"><br>
       <strong>Màn hình giao diện người dùng</strong>
     </td>
-  </tr>
 </table>
 <h2 align="center">🚀 Hướng dẫn cài đặt và chạy</h2>
   <strong>1. Import các thư viện cần thiết </strong><br>
