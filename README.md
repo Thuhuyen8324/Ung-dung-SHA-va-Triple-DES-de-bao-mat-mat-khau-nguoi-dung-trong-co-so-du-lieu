@@ -3,7 +3,7 @@
 <table align="center">
   <tr>
     <td align="center">
-      <img src="Anh/giaoienAdmin.jpg" alt="màn hình điền thông tin" width="30%"><br>
+      <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienAdmin.jpg" alt="màn hình điền thông tin" width="30%"><br>
       <strong>Màn hình nhập thông tin</strong>
     </td>
     <td align="center">
