@@ -3,7 +3,7 @@
 <table align="center">
   <tr>
     <td align="center">
-      <img src="giaodienAdmin.ipg" alt="màn hình điền thông tin" width="30%"><br>
+      <img src="Anh/giaoienAdmin.jpg" alt="màn hình điền thông tin" width="30%"><br>
       <strong>Màn hình nhập thông tin</strong>
     </td>
     <td align="center">
