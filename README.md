@@ -85,6 +85,7 @@ File models.py định nghĩa cấu trúc của các bảng trong cơ sở dữ 
 <strong>🔐 4. Các Hàm Bảo mật và Xử lý Mật khẩu (utils/security.py)</strong></br>
 File này chứa các hàm cốt lõi để bảo vệ mật khẩu, đảm bảo dữ liệu được xử lý an toàn trước khi lưu trữ.</br>
 
+
 - generate_salt(length=32): Tạo một chuỗi salt ngẫu nhiên 32 byte (chuyển thành 64 ký tự hex) bằng os.urandom().<br>
 - hash_sha256(data: str): Băm dữ liệu đầu vào bằng SHA-256, trả về chuỗi hex 64 ký tự.<br>
 - encrypt_3des(data_bytes: bytes): Mã hóa chuỗi byte bằng Triple DES ở chế độ CBC, sử dụng TRIPLE_DES_KEY và TRIPLE_DES_IV. Dữ liệu được pad trước khi mã hóa và kết quả được base64.b64encode để lưu trữ.<br>
@@ -98,6 +99,21 @@ hash_sha256(password + salt)
 
 3. Mã hóa kết quả băm cuối cùng bằng encrypt_3des.
 - verify_password(username: str, password_input: str, stored_salt: str, stored_encrypted_password: str): Xác minh mật khẩu bằng cách chạy mật khẩu nhập vào qua cùng quy trình process_password_for_storage và so sánh kết quả với mật khẩu đã lưu.
+<strong>➡️ 5. Luồng Đăng nhập và Xác thực (routes/auth.py)</strong></br>
+Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người dùng.</br>
+
+- Khi đăng ký, mật khẩu người dùng được xử lý bởi process_password_for_storage trước khi lưu.<br>
+- Khi đăng nhập, mật khẩu nhập vào được xác minh bằng verify_password.<br>
+- Hệ thống kiểm soát số lần đăng nhập thất bại. Nếu vượt quá MAX_FAILED_ATTEMPTS, tài khoản sẽ bị khóa.<br>
+- Mọi nỗ lực đăng nhập (thành công hay thất bại) đều được ghi lại vào bảng login_logs.<br>
+ <td align="center">
+      <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/dk.jpg" alt="màn hình điền thông tin" width="100%"><br>
+      <strong>Màn hình giao diện Đăng ký</strong>
+    </td>
+    <td align="center">
+      <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/login.jpg" alt="Kết quả tính toán" width="100%"><br>
+      <strong>Màn hình giao diện Đăng nhập</strong>
+    </td>
 <table align="center">
   <tr>
     <td align="center">
