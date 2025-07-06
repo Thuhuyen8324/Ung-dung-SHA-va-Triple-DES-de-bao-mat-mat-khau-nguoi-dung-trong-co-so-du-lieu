@@ -148,6 +148,23 @@ Mở trình duyệt web của bạn và truy cập:<code> http://127.0.0.1:5000/
 <strong>Tài khoản Admin mặc định:</strong>
 - Username: <code>admin</code>
 - Password: <code>admin@123</code>
+<strong> LƯU Ý QUAN TRỌNG:</strong> Hãy thay đổi mật khẩu mặc định ngay lập tức sau khi đăng nhập lần đầu!
+<h2 align="center">📧 Liên hệ</h2>
+Nếu có bất kỳ câu hỏi hoặc góp ý nào về dự án, vui lòng liên hệ:
+<center>
+<table>
+  <tbody>
+    <tr>
+      <td>Nguyễn Thu Huyền</td>
+      <td>nguyenthuhuyen8324@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Nguyễn Thu Anh</td>
+      <td>thuanh@</td>
+    </tr>
+  </tbody>
+</table>
+</center>
     
   
 
