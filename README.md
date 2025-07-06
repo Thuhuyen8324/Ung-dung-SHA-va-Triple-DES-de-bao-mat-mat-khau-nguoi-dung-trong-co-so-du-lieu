@@ -106,7 +106,9 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
 - Khi đăng nhập, mật khẩu nhập vào được xác minh bằng verify_password.<br>
 - Hệ thống kiểm soát số lần đăng nhập thất bại. Nếu vượt quá MAX_FAILED_ATTEMPTS, tài khoản sẽ bị khóa.<br>
 - Mọi nỗ lực đăng nhập (thành công hay thất bại) đều được ghi lại vào bảng login_logs.<br>
- <td align="center">
+    </td>
+<table align="center">
+  <td align="center">
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/dk.jpg" alt="màn hình điền thông tin" width="100%"><br>
       <strong>Màn hình giao diện Đăng ký</strong>
     </td>
@@ -114,7 +116,9 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/login.jpg" alt="Kết quả tính toán" width="100%"><br>
       <strong>Màn hình giao diện Đăng nhập</strong>
     </td>
-<table align="center">
+  </tr>
+</table>
+
   <tr>
     <td align="center">
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienAdmin.jpg" alt="màn hình điền thông tin" width="100%"><br>
@@ -125,16 +129,7 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
       <strong>Màn hình giao diện người dùng</strong>
     </td>
   </tr>
-  <td align="center">
-      <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/dk.jpg" alt="màn hình điền thông tin" width="100%"><br>
-      <strong>Màn hình giao diện Đăng ký</strong>
-    </td>
-    <td align="center">
-      <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/login.jpg" alt="Kết quả tính toán" width="100%"><br>
-      <strong>Màn hình giao diện Đăng nhập</strong>
-    </td>
-  </tr>
-  <td align="center">
+   <td align="center">
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/Adminql.jpg" alt="màn hình điền thông tin" width="100%"><br>
       <strong>Màn hình Quản lý của Admin</strong>
     </td>
@@ -147,7 +142,5 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/thaypass.jpg" alt="màn hình điền thông tin" width="100%"><br>
       <strong>Màn hình thay đổi Mật khẩu</strong>
     </td>
-</table>
-
   
 
