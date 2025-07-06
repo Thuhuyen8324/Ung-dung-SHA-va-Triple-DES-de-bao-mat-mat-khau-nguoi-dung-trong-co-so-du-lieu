@@ -126,8 +126,7 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
 <h4 align="center"> <strong>Màn hình giao diện Admin</strong></h4>
 <td align="center">
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienAdmin.jpg" alt="màn hình điền thông tin" width="100%"><br>
-     
-    </td>
+
 <table align="center">
  <td align="center">
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/Adminql.jpg" alt="màn hình điền thông tin" width="100%"><br>
@@ -139,7 +138,16 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
     </td>
   </tr>
 </table>
-  
+<h2>🚀 Cài đặt và Chạy Dự án</h2>
+<strong>1. Khởi tạo Cơ sở Dữ liệu và Tạo tài khoản Admin mặc định:</strong>
+Chạy app.py. Lần đầu chạy, nó sẽ tự động kiểm tra và tạo tài khoản admin mặc định với mật khẩu admin@123 nếu chưa tồn tại.
+  <code> python app.py</code><br>
+<strong>2.Truy cập Ứng dụng:</strong>
+Mở trình duyệt web của bạn và truy cập:<code> http://127.0.0.1:5000/</code>
+
+<strong>Tài khoản Admin mặc định:</strong>
+- Username: <code>admin</code>
+- Password: <code>admin@123</code>
     
   
 
