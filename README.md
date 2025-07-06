@@ -58,16 +58,16 @@ Project/
 </pre>
 
 <strong> 🔑 2. Quản lý Cấu hình (config.py) </strong>
-File config.py chứa các biến môi trường và cấu hình quan trọng cho ứng dụng:
-&nbsp;&nbsp;&bull; SECRET_KEY: Khóa bí mật dùng để bảo vệ session của Flask..<br>
-  &nbsp;&nbsp;&bull; SQLALCHEMY_DATABASE_URI: Chuỗi kết nối đến MS SQL Server, sử dụng pyodbc và xác thực Windows (trusted_connection=yes).<br>
-  &nbsp;&nbsp;&bull; TRIPLE_DES_KEY: Khóa 24 byte cho thuật toán Triple DES.<br>
-  &nbsp;&nbsp;&bull; TRIPLE_DES_IV: Vector Khởi tạo 8 byte cho Triple DES (lưu ý: trong môi trường thực tế, IV cần được tạo ngẫu nhiên cho mỗi lần mã hóa).<br>
-  &nbsp;&nbsp;&bull; MAX_FAILED_ATTEMPTS: Số lần đăng nhập sai tối đa trước khi tài khoản bị khóa.<br>
+File config.py chứa các biến môi trường và cấu hình quan trọng cho ứng dụng:<br>
+<strong> SECRET_KEY:</strong> Khóa bí mật dùng để bảo vệ session của Flask..<br>
+<strong> SQLALCHEMY_DATABASE_URI:</strong> Chuỗi kết nối đến MS SQL Server, sử dụng pyodbc và xác thực Windows (trusted_connection=yes).<br>
+<strong>TRIPLE_DES_KEY:</strong> Khóa 24 byte cho thuật toán Triple DES.<br>
+<strong>TRIPLE_DES_IV:</strong> Vector Khởi tạo 8 byte cho Triple DES (lưu ý: trong môi trường thực tế, IV cần được tạo ngẫu nhiên cho mỗi lần mã hóa).<br>
+<strong>MAX_FAILED_ATTEMPTS:</strong> Số lần đăng nhập sai tối đa trước khi tài khoản bị khóa.<br>
 
 <strong>📊 3. Định nghĩa Mô hình Dữ liệu (models.py)</strong>
 File models.py định nghĩa cấu trúc của các bảng trong cơ sở dữ liệu thông qua Flask-SQLAlchemy.
-  &bull;User <strong>Model:</strong> Ánh xạ tới bảng users, chứa các trường như id, username, salt, encrypted_password, fail_attempts, is_locked, created_at, updated_at.<br>
+<strong>User Model:</strong> Ánh xạ tới bảng users, chứa các trường như id, username, salt, encrypted_password, fail_attempts, is_locked, created_at, updated_at.<br>
   
   &nbsp;&nbsp;&bull;salt (String(64)): Lưu salt ngẫu nhiên cho mật khẩu.<br>
   &nbsp;&nbsp;&bull;encrypted_password (String(256)): Lưu mật khẩu sau khi băm và mã hóa.<br>
@@ -75,7 +75,7 @@ File models.py định nghĩa cấu trúc của các bảng trong cơ sở dữ 
   &nbsp;&nbsp;&bull;is_locked (Boolean): Trạng thái khóa tài khoản.<br>
   &nbsp;&nbsp;&bull;UserMixin: Cung cấp các thuộc tính cần thiết cho Flask-Login.<br>
   
-  &bull;LoginLog <strong>Model:</strong> Ánh xạ tới bảng login_logs, ghi lại các sự kiện đăng nhập với các trường id, user_id, username, login_time, status, ip_address<br>
+  <strong>LoginLog <strong>Model:</strong> Ánh xạ tới bảng login_logs, ghi lại các sự kiện đăng nhập với các trường id, user_id, username, login_time, status, ip_address<br>
 <table align="center">
   <tr>
     <td align="center">
