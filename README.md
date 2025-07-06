@@ -150,9 +150,8 @@ Mở trình duyệt web của bạn và truy cập:<code> http://127.0.0.1:5000/
 - Password: <code>admin@123</code>
 <strong> LƯU Ý QUAN TRỌNG:</strong> Hãy thay đổi mật khẩu mặc định ngay lập tức sau khi đăng nhập lần đầu!
 <h2 align="center">📧 Liên hệ</h2>
-Nếu có bất kỳ câu hỏi hoặc góp ý nào về dự án, vui lòng liên hệ:
-<center>
-<table>
+<h4 align="center">Nếu có bất kỳ câu hỏi hoặc góp ý nào về dự án, vui lòng liên hệ:</h4>
+<table align="center">
   <tbody>
     <tr>
       <td>Nguyễn Thu Huyền</td>
@@ -160,11 +159,10 @@ Nếu có bất kỳ câu hỏi hoặc góp ý nào về dự án, vui lòng li�
     </tr>
     <tr>
       <td>Nguyễn Thu Anh</td>
-      <td>thuanh@</td>
+      <td>nguyenthuanh061@gmail.com</td>
     </tr>
   </tbody>
 </table>
-</center>
     
   
 
