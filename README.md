@@ -178,7 +178,7 @@ Mở trình duyệt web của bạn và truy cập:<code> http://127.0.0.1:5000/
 - Username: <code>admin</code>
 - Password: <code>admin@123</code>
 <strong> LƯU Ý QUAN TRỌNG:</strong> Hãy thay đổi mật khẩu mặc định ngay lập tức sau khi đăng nhập lần đầu!
-<h2 align="center">📧 Liên hệ</h2>
+<h2 align="center">📧 Liên hệ🤝</h2>
 <h4 align="center">Nếu có bất kỳ câu hỏi hoặc góp ý nào về dự án, vui lòng liên hệ:</h4>
 <table align="center">
   <tbody>
