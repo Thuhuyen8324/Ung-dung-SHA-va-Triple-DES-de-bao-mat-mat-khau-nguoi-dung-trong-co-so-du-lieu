@@ -1,5 +1,5 @@
 <h2 align="center">🛡️ ỨNG DỤNG SHA-256 VÀ TRIPLE DES ĐỂ BẢO VỆ MẬT KHẨU NGƯỜI DÙNG TRONG CƠ SỞ DỮ LIỆU</h2>
-<h2 align= "center">✨ Giới thiệu</h2>
+<h2>✨ Giới thiệu</h2>
 Trong bối cảnh an ninh mạng ngày càng phức tạp, việc bảo vệ mật khẩu người dùng trong cơ sở dữ liệu là một trong những thách thức hàng đầu đối với mọi hệ thống thông tin. Dự án này tập trung vào việc triển khai một giải pháp bảo mật mật khẩu toàn diện, sử dụng kết hợp hai thuật toán mật mã kinh điển và mạnh mẽ:
 
 SHA-256 (Secure Hash Algorithm 256-bit): Để thực hiện chức năng băm mật khẩu, chuyển đổi mật khẩu thành một chuỗi băm cố định, không thể đảo ngược.
