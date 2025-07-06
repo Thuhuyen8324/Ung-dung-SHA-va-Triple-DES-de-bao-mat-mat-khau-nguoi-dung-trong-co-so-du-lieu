@@ -7,10 +7,10 @@ Hệ thống được phát triển trên nền tảng Python và Flask Framewor
 
 Mục tiêu của dự án là không chỉ cung cấp một giải pháp thực tiễn cho vấn đề bảo mật mật khẩu mà còn là cơ hội để tìm hiểu sâu hơn về cơ chế hoạt động, ưu nhược điểm và cách thức triển khai của các thuật toán mật mã quan trọng, góp phần nâng cao nhận thức và kỹ năng trong lĩnh vực an toàn thông tin.
 <h2>🏛️ Kiến trúc Hệ thống và Công nghệ Sử dụng</h2>
-Hệ thống được thiết kế theo kiến trúc phân tầng (Multi-tier Architecture), bao gồm các thành phần chính sau:
-1. Tầng Giao diện Người dùng (Frontend):
+Hệ thống được thiết kế theo kiến trúc phân tầng (Multi-tier Architecture), bao gồm các thành phần chính sau:<br>
+<strong>1. Tầng Giao diện Người dùng (Frontend):</strong>
 - HTML/CSS/JavaScript: Được sử dụng để xây dựng giao diện web động và thân thiện với người dùng.
-2. Tầng Ứng dụng (Backend - Logic):
+<strong>2. Tầng Ứng dụng (Backend - Logic):</strong>
 - Python: Ngôn ngữ lập trình chính của ứng dụng.
 - Flask Framework: Micro-framework web để xây dựng các API và xử lý logic nghiệp vụ.
 - Flask-Login: Extension của Flask để quản lý phiên đăng nhập và xác thực người dùng.
@@ -18,7 +18,7 @@ Hệ thống được thiết kế theo kiến trúc phân tầng (Multi-tier Ar
 - PyCryptodome: Thư viện mật mã chuyên dụng cung cấp các cài đặt cho Triple DES.
 - hashlib (Built-in Python): Thư viện chuẩn của Python để thực hiện các phép băm SHA-256.
 
-3. Tầng Cơ sở Dữ liệu (Database):
+<strong>3. Tầng Cơ sở Dữ liệu (Database):</strong>
 
 Microsoft SQL Server: Hệ quản trị cơ sở dữ liệu quan hệ được sử dụng để lưu trữ thông tin người dùng và nhật ký hoạt động.
 <table align="center">
