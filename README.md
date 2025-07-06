@@ -98,7 +98,7 @@ hash_sha256(password + salt)
 2. Nối hai kết quả và băm lại bằng hash_sha256.
 
 3. Mã hóa kết quả băm cuối cùng bằng encrypt_3des.
-- verify_password(username: str, password_input: str, stored_salt: str, stored_encrypted_password: str): Xác minh mật khẩu bằng cách chạy mật khẩu nhập vào qua cùng quy trình process_password_for_storage và so sánh kết quả với mật khẩu đã lưu.
+- verify_password(username: str, password_input: str, stored_salt: str, stored_encrypted_password: str): Xác minh mật khẩu bằng cách chạy mật khẩu nhập vào qua cùng quy trình process_password_for_storage và so sánh kết quả với mật khẩu đã lưu.<br>
 <strong>➡️ 5. Luồng Đăng nhập và Xác thực (routes/auth.py)</strong></br>
 Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người dùng.</br>
 
@@ -118,9 +118,9 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
     </td>
   </tr>
 </table>
-<strong>📊 6. Quản lý Tài khoản (User Dashboard & Admin Dashboard)</strong>
-- <strong>User Dashboard </strong>(routes/main.py): Giao diện cho người dùng thông thường sau khi đăng nhập.
-- <strong>Admin Dashboard </strong>(routes/admin.py): Cung cấp các chức năng quản trị viên như quản lý người dùng (xem, khóa/mở khóa), và xem nhật ký đăng nhập.
+<strong>📊 6. Quản lý Tài khoản (User Dashboard & Admin Dashboard)</strong><br>
+- <strong>User Dashboard </strong>(routes/main.py): Giao diện cho người dùng thông thường sau khi đăng nhập.</br>
+- <strong>Admin Dashboard </strong>(routes/admin.py): Cung cấp các chức năng quản trị viên như quản lý người dùng (xem, khóa/mở khóa), và xem nhật ký đăng nhập.</br>
   <tr>
     <td align="center">
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienAdmin.jpg" alt="màn hình điền thông tin" width="100%"><br>
