@@ -19,8 +19,10 @@ Hệ thống được thiết kế theo kiến trúc phân tầng (Multi-tier Ar
 - hashlib (Built-in Python): Thư viện chuẩn của Python để thực hiện các phép băm SHA-256.<br>
 
 <strong>3. Tầng Cơ sở Dữ liệu (Database):</strong><br>
-
 Microsoft SQL Server: Hệ quản trị cơ sở dữ liệu quan hệ được sử dụng để lưu trữ thông tin người dùng và nhật ký hoạt động.<br>
+<h2>⚙️ Trình bày Kỹ thuật Chi tiết</h2>
+<strong>📂 1. Cấu trúc Thư mục Dự án</strong><br>
+
 <table align="center">
   <tr>
     <td align="center">
