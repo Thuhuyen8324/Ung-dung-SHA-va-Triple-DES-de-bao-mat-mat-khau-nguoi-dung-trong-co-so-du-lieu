@@ -144,15 +144,35 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
   </tr>
 </table>
 <h2>🚀 Cài đặt và Chạy Dự án</h2>
-<strong>Yêu cầu</strong>
+<strong>1. Yêu cầu</strong>
 Python 3.x
 
 Microsoft SQL Server (với một instance, ví dụ: SQLEXPRESS)
 
-ODBC Driver 17 for SQL Server (đảm bảo đã cài đặt trên hệ thống của bạn để pyodbc có thể kết nối).
-<strong>Clone Repository:</strong>
-git clone https:<code>https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu.git</code>
+ODBC Driver 17 for SQL Server (đảm bảo đã cài đặt trên hệ thống của bạn để pyodbc có thể kết nối).<br>
+
+<strong>2. Clone Repository:</strong>
+
+git clone https:<code>https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu.git</code><br>
+
+<strong> 3. Tạo Môi trường Ảo và Cài đặt Dependencies:</strong>
+<code>python -m venv venv
+# On Windows:
+.\venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+pip install -r requirements.txt
+# (Bạn cần tạo file requirements.txt bằng lệnh: pip freeze > requirements.txt)</strong>
+
+<strong>4. Cấu hình Cơ sở Dữ liệu:</strong>
+
+- Đảm bảo SQL Server đang chạy và bạn có quyền truy cập.
+- Kiểm tra và cập nhật chuỗi kết nối SQLALCHEMY_DATABASE_URI trong config.py nếu cần, để phù hợp với cài đặt SQL Server của bạn.
+- Tạo Database: Tạo một cơ sở dữ liệu mới trong SQL Server với tên là AuthDB (hoặc tên bạn đã cấu hình).
+  
 <strong>1. Khởi tạo Cơ sở Dữ liệu và Tạo tài khoản Admin mặc định:</strong>
+
 Chạy app.py. Lần đầu chạy, nó sẽ tự động kiểm tra và tạo tài khoản admin mặc định với mật khẩu admin@123 nếu chưa tồn tại.
   <code> python app.py</code><br>
 <strong>2.Truy cập Ứng dụng:</strong>
