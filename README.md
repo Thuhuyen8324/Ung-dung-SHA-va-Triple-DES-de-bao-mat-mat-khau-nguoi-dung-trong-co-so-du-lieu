@@ -1,6 +1,7 @@
 <h2 align="center">📸 Kết quả hiển thị</h2>
-<h2 align=""center"> Ứng dụng SHA và Triple DES để bảo vệ mật khẩu người dùng trong cơ sở dữ liệu </h2>
-
+<h2 align=""center">ĐỀ TÀI: Ứng dụng SHA và Triple DES để bảo vệ mật khẩu người dùng trong cơ sở dữ liệu </h2>
+<h2>Giới thiệu</h2>
+Trong kỷ nguyên số, bảo mật mật khẩu là yếu tố sống còn để bảo vệ dữ liệu người dùng trước các cuộc tấn công mạng. Tuy nhiên, nhiều hệ thống vẫn lưu mật khẩu dưới dạng văn bản thuần hoặc dùng thuật toán băm lỗi thời, dễ bị khai thác. Bài tập lớn này nhằm xây dựng hệ thống xác thực an toàn bằng cách kết hợp thuật toán băm SHA và mã hóa đối xứng Triple DES, đồng thời áp dụng các kỹ thuật tăng cường như Salt ngẫu nhiên và khóa tài khoản tự động khi phát hiện hành vi bất thường.
 <table align="center">
   <tr>
     <td align="center">
