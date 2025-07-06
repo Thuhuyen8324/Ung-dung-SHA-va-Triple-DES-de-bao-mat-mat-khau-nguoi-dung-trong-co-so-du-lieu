@@ -26,6 +26,7 @@ Hệ thống được thiết kế theo kiến trúc phân tầng (Multi-tier Ar
 <strong>Microsoft SQL Server:</strong> Hệ quản trị cơ sở dữ liệu quan hệ được sử dụng để lưu trữ thông tin người dùng và nhật ký hoạt động.<br>
 <h2>⚙️ Trình bày Kỹ thuật Chi tiết</h2>
 <strong>📂 1. Cấu trúc Thư mục Dự án</strong><br>
+Cấu trúc thư mục của dự án được tổ chức một cách rõ ràng để dễ quản lý và mở rộng:
 <pre>
 Project/
 ├── __pycache__/                  (Các file cache của Python)
@@ -55,15 +56,24 @@ Project/
     ├── database.py                 (Module quản lý kết nối và thao tác với cơ sở dữ liệu)
     └── models.py                   (Định nghĩa các mô hình dữ liệu, tương ứng với bảng trong DB)
 </pre>
-Cấu trúc thư mục của dự án được tổ chức một cách rõ ràng để dễ quản lý và mở rộng:
-<img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/sodo.png"alt="sodo" width="100%"><br>
+
 <strong> 🔑 2. Quản lý Cấu hình (config.py) </strong>
 File config.py chứa các biến môi trường và cấu hình quan trọng cho ứng dụng:
 &nbsp;&nbsp;&bull; SECRET_KEY: Khóa bí mật dùng để bảo vệ session của Flask..<br>
   &nbsp;&nbsp;&bull; SQLALCHEMY_DATABASE_URI: Chuỗi kết nối đến MS SQL Server, sử dụng pyodbc và xác thực Windows (trusted_connection=yes).<br>
   &nbsp;&nbsp;&bull; TRIPLE_DES_KEY: Khóa 24 byte cho thuật toán Triple DES.<br>
   &nbsp;&nbsp;&bull; TRIPLE_DES_IV: Vector Khởi tạo 8 byte cho Triple DES (lưu ý: trong môi trường thực tế, IV cần được tạo ngẫu nhiên cho mỗi lần mã hóa).<br>
-  &nbsp;&nbsp;&bull; MAX_FAILED_ATTEMPTS: Số lần đăng nhập sai tối đa trước khi tài khoản bị khóa..<br>
+  &nbsp;&nbsp;&bull; MAX_FAILED_ATTEMPTS: Số lần đăng nhập sai tối đa trước khi tài khoản bị khóa.<br>
+
+<strong>📊 3. Định nghĩa Mô hình Dữ liệu (models.py)</strong>
+File models.py định nghĩa cấu trúc của các bảng trong cơ sở dữ liệu thông qua Flask-SQLAlchemy.
+  &nbsp;&bull;User <strong>Model:</strong> Ánh xạ tới bảng users, chứa các trường như id, username, salt, encrypted_password, fail_attempts, is_locked, created_at, updated_at.<br>
+  &nbsp;&nbsp;&bull;salt (String(64)): Lưu salt ngẫu nhiên cho mật khẩu.<br>
+  &nbsp;&nbsp;&bull;encrypted_password (String(256)): Lưu mật khẩu sau khi băm và mã hóa.<br>
+  &nbsp;&nbsp;&bull; fail_attempts (Integer): Đếm số lần đăng nhập sai.<br>
+  &nbsp;&nbsp;&bull;is_locked (Boolean): Trạng thái khóa tài khoản.<br>
+  &nbsp;&nbsp;&bull;UserMixin: Cung cấp các thuộc tính cần thiết cho Flask-Login.<br>
+  &nbsp;&bull;LoginLog <strong>Model:</strong> Ánh xạ tới bảng login_logs, ghi lại các sự kiện đăng nhập với các trường id, user_id, username, login_time, status, ip_address<br>
 <table align="center">
   <tr>
     <td align="center">
