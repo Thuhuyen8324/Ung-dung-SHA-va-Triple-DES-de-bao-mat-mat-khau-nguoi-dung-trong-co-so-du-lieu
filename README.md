@@ -22,7 +22,7 @@ Hệ thống được thiết kế theo kiến trúc phân tầng (Multi-tier Ar
 Microsoft SQL Server: Hệ quản trị cơ sở dữ liệu quan hệ được sử dụng để lưu trữ thông tin người dùng và nhật ký hoạt động.<br>
 <h2>⚙️ Trình bày Kỹ thuật Chi tiết</h2>
 <strong>📂 1. Cấu trúc Thư mục Dự án</strong><br>
-<omg src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/sodo.png"alt="sodo" width="100%"><br>
+<img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/sodo.png"alt="sodo" width="100%"><br>
 <table align="center">
   <tr>
     <td align="center">
