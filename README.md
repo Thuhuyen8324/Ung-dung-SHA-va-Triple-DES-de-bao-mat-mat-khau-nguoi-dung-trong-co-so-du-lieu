@@ -144,7 +144,7 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
   </tr>
 </table>
 <h2>🚀 Cài đặt và Chạy Dự án</h2>
-<strong>1. Yêu cầu</strong>
+<strong>1. Yêu cầu</strong><br>
 Python 3.x
 
 Microsoft SQL Server (với một instance, ví dụ: SQLEXPRESS)
@@ -163,7 +163,7 @@ git clone https:<code>https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES
 source venv/bin/activate
 
 pip install -r requirements.txt
-# (Bạn cần tạo file requirements.txt bằng lệnh: pip freeze > requirements.txt)</strong>
+# (Bạn cần tạo file requirements.txt bằng lệnh: pip freeze > requirements.txt)</code>
 
 <strong>4. Cấu hình Cơ sở Dữ liệu:</strong>
 
