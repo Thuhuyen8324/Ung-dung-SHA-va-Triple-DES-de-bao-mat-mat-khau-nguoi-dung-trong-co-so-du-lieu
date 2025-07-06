@@ -8,9 +8,9 @@ Hệ thống được phát triển trên nền tảng Python và Flask Framewor
 Mục tiêu của dự án là không chỉ cung cấp một giải pháp thực tiễn cho vấn đề bảo mật mật khẩu mà còn là cơ hội để tìm hiểu sâu hơn về cơ chế hoạt động, ưu nhược điểm và cách thức triển khai của các thuật toán mật mã quan trọng, góp phần nâng cao nhận thức và kỹ năng trong lĩnh vực an toàn thông tin.
 <h2>🏛️ Kiến trúc Hệ thống và Công nghệ Sử dụng</h2>
 Hệ thống được thiết kế theo kiến trúc phân tầng (Multi-tier Architecture), bao gồm các thành phần chính sau:<br>
-<strong>1. Tầng Giao diện Người dùng (Frontend):</strong>
-- HTML/CSS/JavaScript: Được sử dụng để xây dựng giao diện web động và thân thiện với người dùng.
-<strong>2. Tầng Ứng dụng (Backend - Logic):</strong>
+<strong>1. Tầng Giao diện Người dùng (Frontend):</strong><br>
+- HTML/CSS/JavaScript: Được sử dụng để xây dựng giao diện web động và thân thiện với người dùng.<br>
+<strong>2. Tầng Ứng dụng (Backend - Logic):</strong><br>
 - Python: Ngôn ngữ lập trình chính của ứng dụng.<br>
 - Flask Framework: Micro-framework web để xây dựng các API và xử lý logic nghiệp vụ.<br>
 - Flask-Login: Extension của Flask để quản lý phiên đăng nhập và xác thực người dùng.<br>
