@@ -78,11 +78,26 @@ File models.py định nghĩa cấu trúc của các bảng trong cơ sở dữ 
 - is_locked (Boolean): Trạng thái khóa tài khoản.<br>
 - UserMixin: Cung cấp các thuộc tính cần thiết cho Flask-Login.<br>
 - <strong>LoginLog Model:</strong> Ánh xạ tới bảng login_logs, ghi lại các sự kiện đăng nhập với các trường id, user_id, username, login_time, status, ip_address<br>
- <strong>Mô hình CSDL</strong>
+ <strong>🚀 Mô hình CSDL</strong>
  <td align="center">
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienAdmin.jpg" alt="màn hình điền thông tin" width="100%"><br>
-     
     </td>
+<strong>🔐 4. Các Hàm Bảo mật và Xử lý Mật khẩu (utils/security.py)</strong></br>
+File này chứa các hàm cốt lõi để bảo vệ mật khẩu, đảm bảo dữ liệu được xử lý an toàn trước khi lưu trữ.</br>
+
+- generate_salt(length=32): Tạo một chuỗi salt ngẫu nhiên 32 byte (chuyển thành 64 ký tự hex) bằng os.urandom().<br>
+- hash_sha256(data: str): Băm dữ liệu đầu vào bằng SHA-256, trả về chuỗi hex 64 ký tự.<br>
+- encrypt_3des(data_bytes: bytes): Mã hóa chuỗi byte bằng Triple DES ở chế độ CBC, sử dụng TRIPLE_DES_KEY và TRIPLE_DES_IV. Dữ liệu được pad trước khi mã hóa và kết quả được base64.b64encode để lưu trữ.<br>
+- decrypt_3des(encrypted_data_b64: str): Giải mã chuỗi Base64 đã mã hóa bằng 3DES, sau đó unpad để khôi phục dữ liệu gốc.<br>
+- process_password_for_storage(username: str, password: str, salt: str): Quy trình chính để chuẩn bị mật khẩu lưu trữ:<br>
+hash_sha256(password + salt)
+
+1. hash_sha256(username)
+
+2. Nối hai kết quả và băm lại bằng hash_sha256.
+
+3. Mã hóa kết quả băm cuối cùng bằng encrypt_3des.
+- verify_password(username: str, password_input: str, stored_salt: str, stored_encrypted_password: str): Xác minh mật khẩu bằng cách chạy mật khẩu nhập vào qua cùng quy trình process_password_for_storage và so sánh kết quả với mật khẩu đã lưu.
 <table align="center">
   <tr>
     <td align="center">
