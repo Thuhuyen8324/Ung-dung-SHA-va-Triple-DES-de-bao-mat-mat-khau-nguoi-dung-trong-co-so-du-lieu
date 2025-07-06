@@ -167,11 +167,11 @@ git clone https:<code>https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES
 - Kiểm tra và cập nhật chuỗi kết nối SQLALCHEMY_DATABASE_URI trong config.py nếu cần, để phù hợp với cài đặt SQL Server của bạn.
 - Tạo Database: Tạo một cơ sở dữ liệu mới trong SQL Server với tên là AuthDB (hoặc tên bạn đã cấu hình).
   
-<strong>1. Khởi tạo Cơ sở Dữ liệu và Tạo tài khoản Admin mặc định:</strong>
+<strong>5. Khởi tạo Cơ sở Dữ liệu và Tạo tài khoản Admin mặc định:</strong>
 
 Chạy app.py. Lần đầu chạy, nó sẽ tự động kiểm tra và tạo tài khoản admin mặc định với mật khẩu admin@123 nếu chưa tồn tại.
   <code> python app.py</code><br>
-<strong>2.Truy cập Ứng dụng:</strong>
+<strong>6.Truy cập Ứng dụng:</strong>
 Mở trình duyệt web của bạn và truy cập:<code> http://127.0.0.1:5000/</code>
 
 <strong>Tài khoản Admin mặc định:</strong>
