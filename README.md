@@ -77,9 +77,10 @@ File models.py định nghĩa cấu trúc của các bảng trong cơ sở dữ 
 - is_locked (Boolean): Trạng thái khóa tài khoản.<br>
 - UserMixin: Cung cấp các thuộc tính cần thiết cho Flask-Login.<br>
 - <strong>LoginLog Model:</strong> Ánh xạ tới bảng login_logs, ghi lại các sự kiện đăng nhập với các trường id, user_id, username, login_time, status, ip_address<br>
+
  <strong>🚀 Mô hình CSDL</strong>
  <td align="center">
-      <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienAdmin.jpg" alt="màn hình điền thông tin" width="100%"><br>
+      <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/csdl.jpg" alt="csdl" width="100%"><br>
     </td>
 <strong>🔐 4. Các Hàm Bảo mật và Xử lý Mật khẩu (utils/security.py)</strong></br>
 File này chứa các hàm cốt lõi để bảo vệ mật khẩu, đảm bảo dữ liệu được xử lý an toàn trước khi lưu trữ.</br>
