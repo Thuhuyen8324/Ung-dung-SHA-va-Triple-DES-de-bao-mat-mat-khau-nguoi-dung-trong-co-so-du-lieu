@@ -27,32 +27,33 @@ Hệ thống được thiết kế theo kiến trúc phân tầng (Multi-tier Ar
 <h2>⚙️ Trình bày Kỹ thuật Chi tiết</h2>
 <strong>📂 1. Cấu trúc Thư mục Dự án</strong><br>
 <pre>
-├── app.py                  # Điểm khởi đầu và cấu hình chính của ứng dụng Flask
-├── config.py               # Chứa các biến cấu hình (khóa bí mật, URI CSDL, khóa mã hóa...)
-├── database.py             # Khởi tạo đối tượng SQLAlchemy
-├── models.py               # Định nghĩa các mô hình CSDL (User, LoginLog)
-├── utils/                  # Chứa các tiện ích, đặc biệt là các hàm bảo mật
-│   └── security.py         # Các hàm băm, mã hóa, giải mã và xử lý mật khẩu
-├── routes/                 # Chứa các Blueprints cho các nhóm route
-│   ├── __init__.py
-│   ├── auth.py             # Các route liên quan đến xác thực (đăng nhập, đăng ký...)
-│   ├── admin.py            # Các route dành cho quản trị viên
-│   └── main.py             # Các route chung cho người dùng
-├── templates/              # Chứa các file HTML giao diện người dùng
-│   ├── 403.html
-│   ├── 404.html
-│   ├── auth/
-│   │   ├── login.html
-│   │   └── register.html
-│   ├── admin/
-│   │   ├── admin_dashboard.html
-│   │   ├── user_management.html
-│   │   └── login_logs.html
-│   └── main/
-│       └── dashboard.html
-└── static/                 # Chứa các file tĩnh (CSS, JavaScript, hình ảnh)
-    ├── css/
-    └── js/
+Project/
+├── __pycache__/                  (Các file cache của Python)
+├── routes/                       (Module định tuyến và xử lý yêu cầu HTTP)
+│   ├── __pycache__/
+│   ├── __init__.py               (Khởi tạo package routes)
+│   ├── admin.py                  (Định nghĩa các route và logic cho trang quản trị)
+│   ├── auth.py                   (Định nghĩa các route và logic cho xác thực: đăng ký, đăng nhập)
+│   └── main.py                   (Định nghĩa các route và logic chung của ứng dụng)
+├── templates/                    (Chứa các file HTML giao diện người dùng)
+│   ├── admin/                    (Các template dành cho trang quản trị)
+│   │   ├── dashboard.html        (Trang tổng quan quản trị)
+│   │   ├── login_logs.html       (Trang hiển thị lịch sử đăng nhập)
+│   │   ├── reset_password.html   (Trang đặt lại mật khẩu cho tài khoản bị khóa/quên)
+│   │   └── users.html            (Trang quản lý danh sách người dùng)
+│   ├── 404.html                  (Trang báo lỗi không tìm thấy tài nguyên)
+│   ├── change_password.html      (Trang đổi mật khẩu của người dùng)
+│   ├── dashboard.html            (Trang tổng quan sau khi người dùng đăng nhập)
+│   ├── layout.html               (Template bố cục chung của trang web, chứa header, footer, navigation)
+│   ├── login.html                (Trang đăng nhập)
+│   └── register.html             (Trang đăng ký tài khoản)
+└── utils/                        (Chứa các module tiện ích, thư viện dùng chung)
+    ├── __pycache__/
+    ├── security.py                 (Chứa các hàm xử lý bảo mật: băm SHA, mã hóa/giải mã Triple DES, sinh Salt)
+    ├── app.py                      (File cấu hình và khởi tạo ứng dụng chính)
+    ├── config.py                   (Chứa các biến cấu hình hệ thống: chuỗi kết nối DB, khóa bí mật)
+    ├── database.py                 (Module quản lý kết nối và thao tác với cơ sở dữ liệu)
+    └── models.py                   (Định nghĩa các mô hình dữ liệu, tương ứng với bảng trong DB)
 </pre>
 Cấu trúc thư mục của dự án được tổ chức một cách rõ ràng để dễ quản lý và mở rộng:
 <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/sodo.png"alt="sodo" width="100%"><br>
