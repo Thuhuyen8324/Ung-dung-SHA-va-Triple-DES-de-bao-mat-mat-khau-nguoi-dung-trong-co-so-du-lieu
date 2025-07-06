@@ -97,12 +97,16 @@ File này chứa các hàm cốt lõi để bảo vệ mật khẩu, đảm bả
 - process_password_for_storage(username: str, password: str, salt: str): Quy trình chính để chuẩn bị mật khẩu lưu trữ:<br>
 hash_sha256(password + salt)
 
-1. hash_sha256(username)
+<strong>quy trình chính để chuẩn bị mật khẩu trước khi lưu trữ trong cơ sở dữ liệu, kết hợp SHA-256 và Triple DES:</strong><br>
+1.<strong> Băm mật khẩu và Salt:</strong> Mật khẩu người dùng được băm cùng với một giá trị salt ngẫu nhiên bằng SHA-256. Điều này giúp ngăn chặn tấn công bảng cầu vồng và đảm bảo cùng một mật khẩu sẽ tạo ra các giá trị băm khác nhau nếu salt khác nhau.<br>
 
-2. Nối hai kết quả và băm lại bằng hash_sha256.
+2. <strong>Băm tên người dùng:</strong> Tên đăng nhập cũng được băm bằng SHA-256 để thêm một yếu tố duy nhất khác vào chuỗi bảo mật.
 
-3. Mã hóa kết quả băm cuối cùng bằng encrypt_3des.
-- verify_password(username: str, password_input: str, stored_salt: str, stored_encrypted_password: str): Xác minh mật khẩu bằng cách chạy mật khẩu nhập vào qua cùng quy trình process_password_for_storage và so sánh kết quả với mật khẩu đã lưu.<br>
+3. <strong>Kết hợp và Băm lại:</strong> Hai kết quả băm từ bước 1 và 2 được nối lại và băm thêm một lần nữa bằng SHA-256. Bước này tăng cường độ phức tạp và làm chậm quá trình băm, tuy nhiên không hiệu quả bằng các hàm băm mật khẩu chuyên dụng (ví dụ: Argon2, bcrypt).
+
+4. <strong>Mã hóa bằng Triple DES:</strong> Chuỗi băm cuối cùng (là kết quả của bước 3) được chuyển đổi thành chuỗi byte và sau đó được mã hóa bằng thuật toán Triple DES. Đây là lớp bảo vệ thứ hai, đảm bảo rằng ngay cả khi kẻ tấn công có được chuỗi băm, họ vẫn cần phá vỡ lớp mã hóa 3DES để có được thông tin băm. Kết quả được base64 mã hóa để lưu trữ dạng chuỗi.
+
+- verify_password(username: str, password_input: str, stored_salt: str, stored_encrypted_password: str): Xác minh mật khẩu bằng cách chạy mật khẩu nhập vào qua cùng quy trình process_password_for_storage và so sánh kết quả với mật khẩu đã lưu.
 
 <strong>➡️ 5. Luồng Đăng nhập và Xác thực (routes/auth.py)</strong></br>
 Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người dùng.</br>
