@@ -124,6 +124,10 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
 - <strong>User Dashboard </strong>(routes/main.py): Giao diện cho người dùng thông thường sau khi đăng nhập.</br>
 - <strong>Admin Dashboard </strong>(routes/admin.py): Cung cấp các chức năng quản trị viên như quản lý người dùng (xem, khóa/mở khóa), và xem nhật ký đăng nhập.</br>
 
+<td align="center">
+      <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienAdmin.jpg" alt="màn hình điền thông tin" width="100%"><br>
+      <strong>Màn hình giao diện Admin</strong>
+    </td>
 <table align="center">
  <td align="center">
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/Adminql.jpg" alt="màn hình điền thông tin" width="100%"><br>
@@ -136,10 +140,7 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
   </tr>
 </table>
   <tr>
-    <td align="center">
-      <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienAdmin.jpg" alt="màn hình điền thông tin" width="100%"><br>
-      <strong>Màn hình giao diện Admin</strong>
-    </td>
+    
     <td align="center">
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienND.jpg" alt="Kết quả tính toán" width="100%"><br>
       <strong>Màn hình giao diện người dùng</strong>
