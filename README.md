@@ -23,33 +23,13 @@ Microsoft SQL Server: Hệ quản trị cơ sở dữ liệu quan hệ được 
 <h2>⚙️ Trình bày Kỹ thuật Chi tiết</h2>
 <strong>📂 1. Cấu trúc Thư mục Dự án</strong><br>
 <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/sodo.png"alt="sodo" width="100%"><br>
-.
-├── app.py                  # Điểm khởi đầu và cấu hình chính của ứng dụng Flask
-├── config.py               # Chứa các biến cấu hình (khóa bí mật, URI CSDL, khóa mã hóa...)
-├── database.py             # Khởi tạo đối tượng SQLAlchemy
-├── models.py               # Định nghĩa các mô hình CSDL (User, LoginLog)
-├── utils/                  # Chứa các tiện ích, đặc biệt là các hàm bảo mật
-│   └── security.py         # Các hàm băm, mã hóa, giải mã và xử lý mật khẩu
-├── routes/                 # Chứa các Blueprints cho các nhóm route
-│   ├── __init__.py
-│   ├── auth.py             # Các route liên quan đến xác thực (đăng nhập, đăng ký...)
-│   ├── admin.py            # Các route dành cho quản trị viên
-│   └── main.py             # Các route chung cho người dùng
-├── templates/              # Chứa các file HTML giao diện người dùng
-│   ├── 403.html
-│   ├── 404.html
-│   ├── auth/
-│   │   ├── login.html
-│   │   └── register.html
-│   ├── admin/
-│   │   ├── admin_dashboard.html
-│   │   ├── user_management.html
-│   │   └── login_logs.html
-│   └── main/
-│       └── dashboard.html
-└── static/                 # Chứa các file tĩnh (CSS, JavaScript, hình ảnh)
-    ├── css/
-    └── js/
+<strong> 🔑 2. Quản lý Cấu hình (config.py) </strong>
+File config.py chứa các biến môi trường và cấu hình quan trọng cho ứng dụng:
+&nbsp;&nbsp;&bull; SECRET_KEY: Khóa bí mật dùng để bảo vệ session của Flask..<br>
+  &nbsp;&nbsp;&bull; SQLALCHEMY_DATABASE_URI: Chuỗi kết nối đến MS SQL Server, sử dụng pyodbc và xác thực Windows (trusted_connection=yes).<br>
+  &nbsp;&nbsp;&bull; TRIPLE_DES_KEY: Khóa 24 byte cho thuật toán Triple DES.<br>
+  &nbsp;&nbsp;&bull; TRIPLE_DES_IV: Vector Khởi tạo 8 byte cho Triple DES (lưu ý: trong môi trường thực tế, IV cần được tạo ngẫu nhiên cho mỗi lần mã hóa).<br>
+  &nbsp;&nbsp;&bull; MAX_FAILED_ATTEMPTS: Số lần đăng nhập sai tối đa trước khi tài khoản bị khóa..<br>
 <table align="center">
   <tr>
     <td align="center">
