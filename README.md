@@ -144,6 +144,14 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
   </tr>
 </table>
 <h2>🚀 Cài đặt và Chạy Dự án</h2>
+<strong>Yêu cầu</strong>
+Python 3.x
+
+Microsoft SQL Server (với một instance, ví dụ: SQLEXPRESS)
+
+ODBC Driver 17 for SQL Server (đảm bảo đã cài đặt trên hệ thống của bạn để pyodbc có thể kết nối).
+<strong>Clone Repository:</strong>
+git clone https:<code>https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu.git</code>
 <strong>1. Khởi tạo Cơ sở Dữ liệu và Tạo tài khoản Admin mặc định:</strong>
 Chạy app.py. Lần đầu chạy, nó sẽ tự động kiểm tra và tạo tài khoản admin mặc định với mật khẩu admin@123 nếu chưa tồn tại.
   <code> python app.py</code><br>
