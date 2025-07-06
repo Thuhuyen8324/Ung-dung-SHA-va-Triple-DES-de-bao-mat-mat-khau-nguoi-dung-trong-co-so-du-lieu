@@ -61,7 +61,7 @@ Project/
 </pre>
 
 
-<strong>2. 🔑 2. Quản lý Cấu hình (config.py) </strong><br>
+<strong>🔑 2. Quản lý Cấu hình (config.py) </strong><br>
 File config.py chứa các biến môi trường và cấu hình quan trọng cho ứng dụng:<br>
 
 - <strong>SECRET_KEY:</strong> Khóa bí mật dùng để bảo vệ session của Flask.<br>
@@ -98,6 +98,7 @@ File này chứa các hàm cốt lõi để bảo vệ mật khẩu, đảm bả
 hash_sha256(password + salt)
 
 <strong>quy trình chính để chuẩn bị mật khẩu trước khi lưu trữ trong cơ sở dữ liệu, kết hợp SHA-256 và Triple DES:</strong><br>
+
 1.<strong> Băm mật khẩu và Salt:</strong> Mật khẩu người dùng được băm cùng với một giá trị salt ngẫu nhiên bằng SHA-256. Điều này giúp ngăn chặn tấn công bảng cầu vồng và đảm bảo cùng một mật khẩu sẽ tạo ra các giá trị băm khác nhau nếu salt khác nhau.<br>
 
 2. <strong>Băm tên người dùng:</strong> Tên đăng nhập cũng được băm bằng SHA-256 để thêm một yếu tố duy nhất khác vào chuỗi bảo mật.
