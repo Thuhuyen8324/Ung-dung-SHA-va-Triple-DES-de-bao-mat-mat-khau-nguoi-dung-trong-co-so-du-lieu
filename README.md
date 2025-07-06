@@ -1,4 +1,3 @@
-<h2 align="center">📸 Kết quả hiển thị</h2>
 <h2 align=""center">🛡️ ỨNG DỤNG BẢO MẬT MẬT KHẨU NGƯỜI DÙNG BẰNG SHA-256 VÀ TRIPLE DES TRONG FLASK</h2>
 <h2>✨ Giới thiệu</h2>
 Trong kỷ nguyên số hóa hiện nay, việc bảo vệ dữ liệu cá nhân, đặc biệt là thông tin đăng nhập như mật khẩu, đã trở thành ưu tiên hàng đầu. Các cuộc tấn công mạng nhằm vào mật khẩu đang ngày càng tinh vi, đặt ra thách thức lớn cho các hệ thống phần mềm. Dự án này tập trung vào việc xây dựng một hệ thống xác thực người dùng an toàn, sử dụng các thuật toán mật mã mạnh mẽ là SHA-256 để băm mật khẩu và Triple DES (3DES) để mã hóa lớp cuối cùng, đảm bảo mật khẩu không bao giờ được lưu trữ dưới dạng văn bản thuần trong cơ sở dữ liệu.
