@@ -118,7 +118,9 @@ Module auth.py xử lý các yêu cầu đăng ký và đăng nhập người d�
     </td>
   </tr>
 </table>
-
+<strong>📊 6. Quản lý Tài khoản (User Dashboard & Admin Dashboard)</strong>
+- <strong>User Dashboard </strong>(routes/main.py): Giao diện cho người dùng thông thường sau khi đăng nhập.
+- <strong>Admin Dashboard </strong>(routes/admin.py): Cung cấp các chức năng quản trị viên như quản lý người dùng (xem, khóa/mở khóa), và xem nhật ký đăng nhập.
   <tr>
     <td align="center">
       <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/Anh/giaodienAdmin.jpg" alt="màn hình điền thông tin" width="100%"><br>
