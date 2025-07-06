@@ -1,6 +1,7 @@
 <h2 align="center">🛡️ ỨNG DỤNG SHA-256 VÀ TRIPLE DES ĐỂ BẢO VỆ MẬT KHẨU NGƯỜI DÙNG TRONG CƠ SỞ DỮ LIỆU</h2>
 <h2>✨ Giới thiệu</h2>
-Trong bối cảnh an ninh mạng ngày càng phức tạp, việc bảo vệ mật khẩu người dùng trong cơ sở dữ liệu là một trong những thách thức hàng đầu đối với mọi hệ thống thông tin. Dự án này tập trung vào việc triển khai một giải pháp bảo mật mật khẩu toàn diện, sử dụng kết hợp hai thuật toán mật mã kinh điển và mạnh mẽ:
+<p align="justify">
+  Trong bối cảnh an ninh mạng ngày càng phức tạp, việc bảo vệ mật khẩu người dùng trong cơ sở dữ liệu là một trong những thách thức hàng đầu đối với mọi hệ thống thông tin. Dự án này tập trung vào việc triển khai một giải pháp bảo mật mật khẩu toàn diện, sử dụng kết hợp hai thuật toán mật mã kinh điển và mạnh mẽ:
 
 SHA-256 (Secure Hash Algorithm 256-bit): Để thực hiện chức năng băm mật khẩu, chuyển đổi mật khẩu thành một chuỗi băm cố định, không thể đảo ngược.
 
@@ -9,6 +10,7 @@ Triple DES (3DES - Triple Data Encryption Standard): Để mã hóa lớp cuối
 Mục tiêu chính của dự án là đảm bảo rằng mật khẩu người dùng không bao giờ được lưu trữ dưới dạng văn bản thuần, ngay cả khi cơ sở dữ liệu bị xâm nhập. Hệ thống được phát triển trên nền tảng Python và Flask Framework, kết nối với Microsoft SQL Server. Bên cạnh việc tích hợp sâu các thuật toán SHA-256 và Triple DES, dự án còn kết hợp các biện pháp bảo mật thực tiễn khác như sử dụng Salt ngẫu nhiên cho mỗi mật khẩu, kết hợp tên đăng nhập vào quá trình băm để tăng cường tính duy nhất, và triển khai cơ chế tự động khóa tài khoản khi có nhiều lần đăng nhập thất bại, nhằm chống lại các cuộc tấn công vét cạn và tấn công từ điển.
 
 Dự án này không chỉ là một ứng dụng thực tế mà còn là nghiên cứu chuyên sâu về cách các thuật toán mật mã cơ bản hoạt động, ưu nhược điểm của chúng trong bối cảnh bảo mật mật khẩu hiện đại, và phương pháp triển khai chúng một cách an toàn trong một ứng dụng web.
+</p>
 <h2>🏛️ Kiến trúc Hệ thống và Công nghệ Sử dụng</h2>
 Hệ thống được thiết kế theo kiến trúc phân tầng (Multi-tier Architecture), bao gồm các thành phần chính sau:<br>
 <strong>1. Tầng Giao diện Người dùng (Frontend):</strong><br>
