@@ -156,13 +156,13 @@ ODBC Driver 17 for SQL Server (đảm bảo đã cài đặt trên hệ thống 
 git clone https:<code>https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu.git</code><br>
 
 <strong> 3. Tạo Môi trường Ảo và Cài đặt Dependencies:</strong>
-<code>python -m venv venv
-# On Windows:
-.\venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
+<code>python -m venv venv </code>
+<code># On Windows:
+.\venv\Scripts\activate</code>
+<code># On macOS/Linux:
+source venv/bin/activate</code>
 
-pip install -r requirements.txt
+<code>pip install -r requirements.txt
 # (Bạn cần tạo file requirements.txt bằng lệnh: pip freeze > requirements.txt)</code>
 
 <strong>4. Cấu hình Cơ sở Dữ liệu:</strong>
