@@ -11,16 +11,16 @@ Hệ thống được thiết kế theo kiến trúc phân tầng (Multi-tier Ar
 <strong>1. Tầng Giao diện Người dùng (Frontend):</strong>
 - HTML/CSS/JavaScript: Được sử dụng để xây dựng giao diện web động và thân thiện với người dùng.
 <strong>2. Tầng Ứng dụng (Backend - Logic):</strong>
-- Python: Ngôn ngữ lập trình chính của ứng dụng.
-- Flask Framework: Micro-framework web để xây dựng các API và xử lý logic nghiệp vụ.
-- Flask-Login: Extension của Flask để quản lý phiên đăng nhập và xác thực người dùng.
-- Flask-SQLAlchemy: Extension của Flask để tích hợp SQLAlchemy (Object Relational Mapper - ORM), giúp tương tác với cơ sở dữ liệu.
-- PyCryptodome: Thư viện mật mã chuyên dụng cung cấp các cài đặt cho Triple DES.
-- hashlib (Built-in Python): Thư viện chuẩn của Python để thực hiện các phép băm SHA-256.
+- Python: Ngôn ngữ lập trình chính của ứng dụng.<br>
+- Flask Framework: Micro-framework web để xây dựng các API và xử lý logic nghiệp vụ.<br>
+- Flask-Login: Extension của Flask để quản lý phiên đăng nhập và xác thực người dùng.<br>
+- Flask-SQLAlchemy: Extension của Flask để tích hợp SQLAlchemy (Object Relational Mapper - ORM), giúp tương tác với cơ sở dữ liệu.<br>
+- PyCryptodome: Thư viện mật mã chuyên dụng cung cấp các cài đặt cho Triple DES.<br>
+- hashlib (Built-in Python): Thư viện chuẩn của Python để thực hiện các phép băm SHA-256.<br>
 
-<strong>3. Tầng Cơ sở Dữ liệu (Database):</strong>
+<strong>3. Tầng Cơ sở Dữ liệu (Database):</strong><br>
 
-Microsoft SQL Server: Hệ quản trị cơ sở dữ liệu quan hệ được sử dụng để lưu trữ thông tin người dùng và nhật ký hoạt động.
+Microsoft SQL Server: Hệ quản trị cơ sở dữ liệu quan hệ được sử dụng để lưu trữ thông tin người dùng và nhật ký hoạt động.<br>
 <table align="center">
   <tr>
     <td align="center">
