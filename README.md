@@ -57,13 +57,16 @@ Project/
     └── models.py                   (Định nghĩa các mô hình dữ liệu, tương ứng với bảng trong DB)
 </pre>
 
-<strong> 🔑 2. Quản lý Cấu hình (config.py) </strong>
+
+<strong>2. 🔑 2. Quản lý Cấu hình (config.py) </strong><br>
 File config.py chứa các biến môi trường và cấu hình quan trọng cho ứng dụng:<br>
-<strong> SECRET_KEY:</strong> Khóa bí mật dùng để bảo vệ session của Flask..<br>
-<strong> SQLALCHEMY_DATABASE_URI:</strong> Chuỗi kết nối đến MS SQL Server, sử dụng pyodbc và xác thực Windows (trusted_connection=yes).<br>
-<strong>TRIPLE_DES_KEY:</strong> Khóa 24 byte cho thuật toán Triple DES.<br>
-<strong>TRIPLE_DES_IV:</strong> Vector Khởi tạo 8 byte cho Triple DES (lưu ý: trong môi trường thực tế, IV cần được tạo ngẫu nhiên cho mỗi lần mã hóa).<br>
-<strong>MAX_FAILED_ATTEMPTS:</strong> Số lần đăng nhập sai tối đa trước khi tài khoản bị khóa.<br>
+
+- <strong>SECRET_KEY:</strong> Khóa bí mật dùng để bảo vệ session của Flask.<br>
+- <strong>SQLALCHEMY_DATABASE_URI:</strong> Chuỗi kết nối đến MS SQL Server, sử dụng pyodbc và xác thực Windows (trusted_connection=yes).<br>
+- <strong>TRIPLE_DES_KEY:</strong> Khóa 24 byte cho thuật toán Triple DES.<br>
+- <strong>Flask-SQLAlchemy:</strong> Extension của Flask để tích hợp SQLAlchemy (Object Relational Mapper - ORM), giúp tương tác với cơ sở dữ liệu.<br>
+- <strong>TRIPLE_DES_IV:</strong> Vector Khởi tạo 8 byte cho Triple DES (lưu ý: trong môi trường thực tế, IV cần được tạo ngẫu nhiên cho mỗi lần mã hóa).<br>
+- <strong>MAX_FAILED_ATTEMPTS:</strong> Số lần đăng nhập sai tối đa trước khi tài khoản bị khóa.<br>
 
 <strong>📊 3. Định nghĩa Mô hình Dữ liệu (models.py)</strong>
 File models.py định nghĩa cấu trúc của các bảng trong cơ sở dữ liệu thông qua Flask-SQLAlchemy.
