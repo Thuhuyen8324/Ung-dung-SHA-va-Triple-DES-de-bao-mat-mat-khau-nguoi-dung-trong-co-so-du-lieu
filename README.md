@@ -9,19 +9,52 @@ Mục tiêu của dự án là không chỉ cung cấp một giải pháp thực
 <h2>🏛️ Kiến trúc Hệ thống và Công nghệ Sử dụng</h2>
 Hệ thống được thiết kế theo kiến trúc phân tầng (Multi-tier Architecture), bao gồm các thành phần chính sau:<br>
 <strong>1. Tầng Giao diện Người dùng (Frontend):</strong><br>
-- HTML/CSS/JavaScript: Được sử dụng để xây dựng giao diện web động và thân thiện với người dùng.<br>
+
+- <strong>HTML/CSS/JavaScript:</strong> Được sử dụng để xây dựng giao diện web động và thân thiện với người dùng.<br>
+
 <strong>2. Tầng Ứng dụng (Backend - Logic):</strong><br>
-- Python: Ngôn ngữ lập trình chính của ứng dụng.<br>
-- Flask Framework: Micro-framework web để xây dựng các API và xử lý logic nghiệp vụ.<br>
-- Flask-Login: Extension của Flask để quản lý phiên đăng nhập và xác thực người dùng.<br>
-- Flask-SQLAlchemy: Extension của Flask để tích hợp SQLAlchemy (Object Relational Mapper - ORM), giúp tương tác với cơ sở dữ liệu.<br>
-- PyCryptodome: Thư viện mật mã chuyên dụng cung cấp các cài đặt cho Triple DES.<br>
-- hashlib (Built-in Python): Thư viện chuẩn của Python để thực hiện các phép băm SHA-256.<br>
+
+- <strong>Python:</strong> Ngôn ngữ lập trình chính của ứng dụng.<br>
+- <strong>Flask Framework:</strong> Micro-framework web để xây dựng các API và xử lý logic nghiệp vụ.<br>
+- <strong>Flask-Login:</strong> Extension của Flask để quản lý phiên đăng nhập và xác thực người dùng.<br>
+- <strong>Flask-SQLAlchemy:</strong> Extension của Flask để tích hợp SQLAlchemy (Object Relational Mapper - ORM), giúp tương tác với cơ sở dữ liệu.<br>
+- <strong>PyCryptodome:</strong> Thư viện mật mã chuyên dụng cung cấp các cài đặt cho Triple DES.<br>
+- <strong>hashlib (Built-in Python):</strong> Thư viện chuẩn của Python để thực hiện các phép băm SHA-256.<br>
 
 <strong>3. Tầng Cơ sở Dữ liệu (Database):</strong><br>
-Microsoft SQL Server: Hệ quản trị cơ sở dữ liệu quan hệ được sử dụng để lưu trữ thông tin người dùng và nhật ký hoạt động.<br>
+
+<strong>Microsoft SQL Server:</strong> Hệ quản trị cơ sở dữ liệu quan hệ được sử dụng để lưu trữ thông tin người dùng và nhật ký hoạt động.<br>
 <h2>⚙️ Trình bày Kỹ thuật Chi tiết</h2>
 <strong>📂 1. Cấu trúc Thư mục Dự án</strong><br>
+<pre>
+├── app.py                  # Điểm khởi đầu và cấu hình chính của ứng dụng Flask
+├── config.py               # Chứa các biến cấu hình (khóa bí mật, URI CSDL, khóa mã hóa...)
+├── database.py             # Khởi tạo đối tượng SQLAlchemy
+├── models.py               # Định nghĩa các mô hình CSDL (User, LoginLog)
+├── utils/                  # Chứa các tiện ích, đặc biệt là các hàm bảo mật
+│   └── security.py         # Các hàm băm, mã hóa, giải mã và xử lý mật khẩu
+├── routes/                 # Chứa các Blueprints cho các nhóm route
+│   ├── __init__.py
+│   ├── auth.py             # Các route liên quan đến xác thực (đăng nhập, đăng ký...)
+│   ├── admin.py            # Các route dành cho quản trị viên
+│   └── main.py             # Các route chung cho người dùng
+├── templates/              # Chứa các file HTML giao diện người dùng
+│   ├── 403.html
+│   ├── 404.html
+│   ├── auth/
+│   │   ├── login.html
+│   │   └── register.html
+│   ├── admin/
+│   │   ├── admin_dashboard.html
+│   │   ├── user_management.html
+│   │   └── login_logs.html
+│   └── main/
+│       └── dashboard.html
+└── static/                 # Chứa các file tĩnh (CSS, JavaScript, hình ảnh)
+    ├── css/
+    └── js/
+</pre>
+Cấu trúc thư mục của dự án được tổ chức một cách rõ ràng để dễ quản lý và mở rộng:
 <img src="https://github.com/Thuhuyen8324/Ung-dung-SHA-va-Triple-DES-de-bao-mat-mat-khau-nguoi-dung-trong-co-so-du-lieu/blob/main/sodo.png"alt="sodo" width="100%"><br>
 <strong> 🔑 2. Quản lý Cấu hình (config.py) </strong>
 File config.py chứa các biến môi trường và cấu hình quan trọng cho ứng dụng:
